@@ -3,10 +3,16 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "predev": "start http://localhost:3000",
     "dev": "next dev --turbo",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "git": "powershell scripts/git-pipeline.ps1",
+    "sync": "powershell scripts/git-pipeline.ps1 -Sync",
+    "merge": "powershell scripts/git-pipeline.ps1 -Merge",
+    "clean-local": "powershell scripts/git-pipeline.ps1 -CleanLocal",
+    "pretty": "npx prettier . --write"
   },
   "dependencies": {
     "react": "^18",
